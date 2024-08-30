@@ -4,7 +4,7 @@ import CategoriesCard from "./CategoriesCard";
 
 const Categories = () => {
   return (
-    <div className="container mx-auto max-w-7xl mt-10 lg:mt-20">
+    <div className="custom-container max-w-7xl mt-10 lg:mt-20">
       <div className="flex items-center justify-between mb-10">
         <h4 className="text-xl md:text-3xl font-bold">Categories</h4>
         <Button size="sm">
@@ -16,8 +16,6 @@ const Categories = () => {
           <CategoriesCard {...item} key={item.name} />
         ))}
       </div>
-
-      <div className="h-28"></div>
     </div>
   );
 };
