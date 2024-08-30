@@ -10,17 +10,27 @@ module.exports = {
   prefix: "",
   theme: {
     container: {
+      padding: {
+        DEFAULT: "2rem",
+        sm: "1rem",
+        md: "2rem",
+        lg: "2rem",
+        xl: "2rem",
+      },
       center: true,
-      padding: "2rem",
       screens: {
         "2xl": "1400px",
       },
     },
     extend: {
+      backgroundImage: {
+        "custom-gradient": `linear-gradient(180deg, rgba(231,249,253,0) 0%, #E0FAFE 100%)`,
+      },
       fontFamily: {
         sans: ["Inter", "sans-serif"],
       },
       colors: {
+        customBlue: "#E7FAFE",
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
