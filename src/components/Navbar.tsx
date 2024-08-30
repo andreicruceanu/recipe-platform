@@ -1,17 +1,20 @@
 import Logo from "./Logo";
 import NavLinks from "./NavLinks";
-import { Button } from "./ui";
+import { Button, Separator } from "./ui";
 
 const Navbar = () => {
   return (
-    <div className="container py-8 flex items-center justify-between">
-      <Logo />
-      <NavLinks />
-      <div className="flex gap-4">
-        <Button>Log In</Button>
-        <Button>Sign Up</Button>
+    <>
+      <div className="align-element py-8 px-8 flex items-center justify-between">
+        <Logo />
+        <NavLinks />
+        <div className="flex gap-4">
+          <Button size="sm">Log In</Button>
+          <Button size="sm">Sign Up</Button>
+        </div>
       </div>
-    </div>
+      <Separator />
+    </>
   );
 };
 
