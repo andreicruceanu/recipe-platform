@@ -69,3 +69,11 @@
     @apply bg-background text-foreground;
   }
 }
+@layer components {
+  .align-element {
+    @apply mx-auto max-w-7xl px-0 lg:px-8;
+  }
+  .custom-container {
+    @apply w-full px-4  md:px-8 mx-auto;
+  }
+}
