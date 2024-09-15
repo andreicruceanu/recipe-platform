@@ -2,6 +2,7 @@ import { Button } from "./ui";
 import CategoriesCard from "./CategoriesCard";
 import { useGetCategories } from "@/api/CategoriesApi";
 import CircularLoader from "./CircularLoader";
+import Container from "./Container";
 
 const Categories = () => {
   const { categories, isLoading } = useGetCategories();
@@ -15,7 +16,7 @@ const Categories = () => {
   }
 
   return (
-    <div className="custom-container max-w-7xl mt-10 lg:mt-20">
+    <Container className="mt-10 lg:mt-20">
       <div className="flex items-center justify-between mb-10">
         <h4 className="text-xl md:text-3xl font-bold">Categories</h4>
         <Button size="sm">
@@ -29,7 +30,7 @@ const Categories = () => {
           ))}
         </div>
       )}
-    </div>
+    </Container>
   );
 };
 
