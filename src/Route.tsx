@@ -1,6 +1,7 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Home from "./Pages/Home";
 import Layout from "./Pages/Layout";
+import Recipe from "./Pages/Recipe";
 
 const router = createBrowserRouter([
   {
@@ -11,6 +12,10 @@ const router = createBrowserRouter([
       {
         index: true,
         element: <Home />,
+      },
+      {
+        path: "/recipe/:recipeId",
+        element: <Recipe />,
       },
     ],
   },
