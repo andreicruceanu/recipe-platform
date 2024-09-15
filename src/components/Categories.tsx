@@ -1,8 +1,19 @@
-import { categories } from "@/lib/categories";
 import { Button } from "./ui";
 import CategoriesCard from "./CategoriesCard";
+import { useGetCategories } from "@/api/CategoriesApi";
+import CircularLoader from "./CircularLoader";
 
 const Categories = () => {
+  const { categories, isLoading } = useGetCategories();
+
+  if (isLoading) {
+    return (
+      <div className="custom-container max-w-7xl mt-10 lg:mt-20">
+        <CircularLoader />
+      </div>
+    );
+  }
+
   return (
     <div className="custom-container max-w-7xl mt-10 lg:mt-20">
       <div className="flex items-center justify-between mb-10">
@@ -11,11 +22,13 @@ const Categories = () => {
           <span className="text-xs md:text-sm">View All Categories</span>
         </Button>
       </div>
-      <div className="grid grid-cols-3 md:grid-cols-6 gap-x-4 md:gap-x-8 gap-y-4">
-        {categories.map((item) => (
-          <CategoriesCard {...item} key={item.name} />
-        ))}
-      </div>
+      {categories && !isLoading && (
+        <div className="grid grid-cols-3 md:grid-cols-6 gap-x-4 md:gap-x-8 gap-y-4">
+          {categories?.map((item) => (
+            <CategoriesCard {...item} key={item.name} />
+          ))}
+        </div>
+      )}
     </div>
   );
 };
