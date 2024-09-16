@@ -2,7 +2,7 @@ import { cn } from "@/lib/utils";
 
 type Props = {
   children: React.ReactNode;
-  className: string | undefined;
+  className?: string | undefined;
 };
 
 const Container = ({ children, className }: Props) => {
