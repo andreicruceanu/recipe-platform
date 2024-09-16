@@ -1,4 +1,4 @@
-import { Categories } from "@/lib/categories";
+import { Categories } from "@/lib/types";
 import { Link } from "react-router-dom";
 
 const CategoriesCard = ({ name, image, colorEnd, colorStart }: Categories) => {
@@ -10,7 +10,11 @@ const CategoriesCard = ({ name, image, colorEnd, colorStart }: Categories) => {
       }}
     >
       <Link to="/" className="flex flex-col items-center gap-6 md:gap-12">
-        <img src={image} alt={name} className="w-8 md:w-20 rounded-lg" />
+        <img
+          src={image}
+          alt={name}
+          className="w-8 md:w-16 lg:w-20 rounded-lg"
+        />
         <span className="text-xs md:text-sm font-bold">{name}</span>
       </Link>
     </div>

@@ -1,6 +1,5 @@
 import Container from "@/components/Container";
 import img from "../assets/Reteta10.png";
-import img1 from "../assets/RecipesImg.png";
 import {
   Breadcrumb,
   BreadcrumbItem,
@@ -59,8 +58,8 @@ const Blog = () => {
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-6 gap-y-8 mt-24">
-        {[1, 2, 3, 4, 5, 6, 7].map((item, index) => (
-          <Link to="/text">
+        {[1, 2, 3, 4, 5, 6, 7].map((_, index) => (
+          <Link to="/text" key={index}>
             <Card className="h-[400px] hover:shadow-lg">
               <CardContent className="flex flex-col w-full p-0">
                 <img

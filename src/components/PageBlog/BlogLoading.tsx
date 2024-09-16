@@ -30,7 +30,7 @@ const BlogLoading = () => {
         {Array.from({ length: 3 }).map((_, index) => {
           return (
             <div key={index} className="animate-pulse h-[400px] ">
-              <div className=" animate-pulse flex flex-col w-full p-0">
+              <div className="animate-pulse flex flex-col w-full p-0">
                 <Skeleton className="rounded-t-md w-full h-48" />
                 <div className="px-3">
                   <Skeleton className="h-4 w-1/2 my-2" />

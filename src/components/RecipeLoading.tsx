@@ -1,11 +1,12 @@
 import useMediaQuery from "@/hook/useMediaQuery";
+import Container from "./Container";
 import { Skeleton } from "./ui";
 
 const RecipeLoading = () => {
   const isMediumScreens = useMediaQuery("(min-width: 1024px)");
 
   return (
-    <div className="custom-container animate-pulse max-w-7xl mt-10 mb-12">
+    <Container className="animate-pulse mt-10 mb-12">
       <div className="flex items-center justify-between">
         <div className="flex items-center gap-x-2">
           <Skeleton className="h-4 w-40 rounded-full" />
@@ -66,7 +67,7 @@ const RecipeLoading = () => {
           </div>
         </div>
       </div>
-    </div>
+    </Container>
   );
 };
 
