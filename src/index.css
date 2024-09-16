@@ -73,7 +73,11 @@
   .align-element {
     @apply mx-auto max-w-7xl px-0 lg:px-8;
   }
-  .custom-container {
-    @apply w-full px-4  md:px-8 mx-auto;
-  }
+}
+
+.custom-input-newsletter:focus {
+  --tw-ring-inset: initial !important;
+  --tw-ring-offset-width: 0px !important;
+  --tw-ring-width: 0px !important;
+  box-shadow: none !important;
 }
