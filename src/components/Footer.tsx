@@ -2,10 +2,11 @@ import Logo from "./Logo";
 import { Separator } from "./ui";
 import FacebookImg from "../assets/Facebook.png";
 import InstagramImg from "../assets/Instagram.png";
+import Container from "./Container";
 
 const Footer = () => {
   return (
-    <footer className="custom-container max-w-7xl mt-10 lg:mt-28">
+    <Container className="mt-10 lg:mt-28">
       <div className="flex justify-between items-center">
         <div>
           <Logo />
@@ -24,7 +25,7 @@ const Footer = () => {
           <img className="w-3" src={InstagramImg} alt="instagram" />
         </div>
       </div>
-    </footer>
+    </Container>
   );
 };
 
