@@ -9,9 +9,9 @@ const Categories = () => {
 
   if (isLoading) {
     return (
-      <div className="custom-container max-w-7xl mt-10 lg:mt-20">
+      <Container className="mt-10 lg:mt-20">
         <CircularLoader />
-      </div>
+      </Container>
     );
   }
 
